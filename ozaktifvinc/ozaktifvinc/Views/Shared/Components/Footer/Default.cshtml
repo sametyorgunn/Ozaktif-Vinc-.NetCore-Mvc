@@ -1,0 +1,63 @@
+﻿@model ozaktifvinc.Models.FirmaIletisim
+
+<footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-info">
+                        <h3>Özaktif Vinç</h3>
+                        <p>
+                            @Model.Adres <br>
+@*                            NY 535022, USA<br><br>
+*@                            <strong>Telefon:</strong> @Model.Tel<br>
+                            <strong>Email:</strong> @Model.Mail<br>
+                        </p>
+                        <div class="social-links d-flex mt-3">
+                            <a href="@Model.Twitter" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
+                            <a href="@Model.facebook" class="d-flex align-items-center justify-content-center"><i class="bi bi-facebook"></i></a>
+                            <a href="@Model.Instagram" class="d-flex align-items-center justify-content-center"><i class="bi bi-instagram"></i></a>
+@*                            <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-linkedin"></i></a>
+*@                        </div>
+                    </div>
+                </div><!-- End footer info column-->
+
+                <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Menü</h4>
+                    <ul>
+                        <li><a href="/Home/Index">Anasayfa</a></li>
+                        <li><a href="#alt-services">Hakkımızda</a></li>
+                        <li><a href="#services">Servisler</a></li>
+                        <li><a href="#projects">Galeri</a></li>
+                        <li><a href="#get-started">İletişim</a></li>
+                    </ul>
+                </div><!-- End footer links column-->
+
+               @* <div class="col-lg-2 col-md-3 footer-links">
+                    <h4>Hizmetlerimiz</h4>
+                    <ul>
+                        <li><a href="#">Mobil vinç</a></li>
+                        <li><a href="#">Sepetli Vinç</a></li>
+                        <li><a href="#">Product Management</a></li>
+                        <li><a href="#">Marketing</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                    </ul>
+                </div>*@
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Özaktif Vinç</span></strong>. Tüm hakları saklıdır
+            </div>
+          
+        </div>
+    </div>
+
+</footer>

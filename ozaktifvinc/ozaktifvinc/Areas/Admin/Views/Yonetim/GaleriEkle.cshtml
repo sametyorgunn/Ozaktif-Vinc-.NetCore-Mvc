@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "GaleriEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>GaleriEkle</h1>
+
+<form method="post" enctype="multipart/form-data">
+ 
+  <div class="form-group">
+    <label for="exampleInputPassword1">Resim Yazı</label>
+    <input type="text" class="form-control col-sm-3" name="ResimYazi" id="exampleInputPassword1" placeholder="Yazı">
+  </div>
+ 
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Resim Yükle</label>
+    <input type="file" name="Resim" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+
+
+<br /><br />
+<a href="/Admin/Yonetim/GaleriListele" class="btn btn-success col-md-3">Galeri Listesine Git</a>

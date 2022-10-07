@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "HakkimizdaMaddeEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<H3>Hakkımızda Madde Ekle</H3>
+
+
+@await Component.InvokeAsync("AdminHakkimizdaMaddeListele")
+
+<form method="post" action="/Admin/Yonetim/HakkimizdaMaddeEkle" enctype="multipart/form-data">
+ 
+     <div class="form-group col-sm-3">
+    <label for="exampleInputPassword1">Madde Başlık</label>
+    <input type="text" class="form-control col-sm-3" name="MaddeBaslik" id="exampleInputPassword1" placeholder="Başlık">
+  </div>
+  <div class="form-group col-sm-3">
+    <label for="exampleInputPassword1">Madde</label>
+    <input type="text" class="form-control col-sm-3" name="Madde" id="exampleInputPassword1" placeholder="Maddeler">
+  </div>
+    <button type="submit" class="btn btn-primary">Kaydet</button>
+
+</form>
+
+
+

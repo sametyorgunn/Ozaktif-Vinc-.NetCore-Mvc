@@ -1,0 +1,31 @@
+﻿@model ozaktifvinc.Models.Hakkimizda
+@{
+    ViewData["Title"] = "HakkimizdaDuzenle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>HakkimizdaDuzenle</h1>
+
+<form method="post" enctype="multipart/form-data">
+ 
+     <div hidden class="form-group">
+    <label for="exampleInputPassword1">id</label>
+    <input type="text" class="form-control col-sm-3" value="@Model.Id" name="Id" id="exampleInputPassword1" placeholder="Bşlık">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Başlık</label>
+    <input type="text" class="form-control col-sm-3" value="@Model.Baslik" name="Baslik" id="exampleInputPassword1" placeholder="Bşlık" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">İçerik</label>
+    <input type="text" class="form-control col-sm-3" value="@Model.Icerik" name="Icerik" id="exampleInputPassword1" placeholder="içerik" required>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Resim Yükle</label>
+    <input type="file" name="Resim" class="form-control-file" id="exampleFormControlFile1" required>
+  </div>
+  <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+
+

@@ -1,0 +1,28 @@
+﻿    @model List<ozaktifvinc.Models.Galeri>
+    <section id="projects" class="projects">
+            <div class="container" data-aos="fade-up">
+
+                <div class="section-header">
+                    <h2>Galeri</h2>
+               </div>
+
+                <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+                    <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+                        @foreach(var i in Model)
+                        {
+                        <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+                            <div class="portfolio-content h-100" style="width:300px; max-height:300px; min-height:250px;">
+                                <img src="~/Resimler/Galeri/@i.ResimYol" class="img-fluid" alt="">
+                                <div class="portfolio-info">
+                                    <p>@i.ResimYazi</p>
+                                    <a href="~/Resimler/Galeri/@i.ResimYol" title="@i.ResimYazi" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                    <a href="" title="daha fazlası" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        }
+                        <!-- End Projects Item -->
+                    </div><!-- End Projects Container -->
+                </div>
+            </div>
+        </section><!-- End Our Projects Section -->

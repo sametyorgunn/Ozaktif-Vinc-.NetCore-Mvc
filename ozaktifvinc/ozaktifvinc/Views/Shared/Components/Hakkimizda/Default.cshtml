@@ -1,0 +1,46 @@
+﻿   @model ozaktifvinc.Models.Hakkimizda
+
+  @{
+       @if(Model==null)
+        {
+            <section id="alt-services" class="alt-services">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row justify-content-around gy-4">
+                    <div class="col-lg-6 img-bg" style="background-image: url('');" data-aos="zoom-in" data-aos-delay="100"></div>
+
+                    <div class="col-lg-5 d-flex flex-column justify-content-center">
+                        <h3></h3>
+                        <p></p>
+                       @await Component.InvokeAsync("HakkimizdaMaddeListele")
+
+                  
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Alt Services Section -->
+
+    }
+    else
+    {
+         <section id="alt-services" class="alt-services">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row justify-content-around gy-4">
+                    <div class="col-lg-6 img-bg" style="background-image: url('/Resimler/Hakkimizda/@Model.ResimYol');" data-aos="zoom-in" data-aos-delay="100"></div>
+
+                    <div class="col-lg-5 d-flex flex-column justify-content-center">
+                        <h3>@Model.Baslik</h3>
+                        <p>@Model.Icerik</p>
+                       @await Component.InvokeAsync("HakkimizdaMaddeListele")
+
+                  
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Alt Services Section -->
+    }
+}
+    

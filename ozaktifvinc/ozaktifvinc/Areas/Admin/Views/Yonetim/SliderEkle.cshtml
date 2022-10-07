@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "SliderEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>SliderEkle</h1>
+
+<form method="post" enctype="multipart/form-data">
+ 
+  
+ 
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Resim Yükle</label>
+    <input type="file" name="SliderResim" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Kaydet</button>
+</form>
+
+
+<br /><br />
+<a href="/Admin/Yonetim/SliderListele" class="btn btn-success col-md-3">Slider Listesine Git</a>

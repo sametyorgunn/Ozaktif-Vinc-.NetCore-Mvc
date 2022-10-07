@@ -1,0 +1,48 @@
+﻿@model List<ozaktifvinc.Models.IletisimMesaj>
+
+@{
+    ViewData["Title"] = "Mesajlar";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<h4>Mesajlar</h4>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th hidden scope="col">#</th>
+      <th scope="col">adı</th>
+      <th scope="col">Mail</th>
+      <th scope="col">tel</th>
+      <th scope="col">Mesajı</th>
+      <th scope="col">görüntüle</th>
+      <th scope="col">Sil</th>
+    </tr>
+  </thead>
+  <tbody>
+     @foreach(var i in Model)
+     {
+    <tr>
+      <th hidden scope="row">@i.Id</th>
+      <td>@i.Isim</td>
+      <td>@i.Mail</td>
+       <td>@i.Tel</td>
+       <td class="mesaj" value="@i.Mesaj">@i.Mesaj.Substring(0,10)</td>
+        <th><button class="btn btn-primary goruntule">Görüntüle</button></th>
+      <td><a class="btn btn-danger" href="/Admin/Yonetim/MesajSil/@i.Id">Sil</a></td>
+    </tr>
+     }
+  </tbody>
+</table>
+
+
+<script>
+$(".goruntule").click(function() {
+    var mesaj = $(this).parent().parent().find(".mesaj").attr("value")
+    alert("Kişinin Mesajı :" + mesaj)
+})
+</script>

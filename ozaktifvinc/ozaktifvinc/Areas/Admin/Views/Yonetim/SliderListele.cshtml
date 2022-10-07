@@ -1,0 +1,25 @@
+﻿@model List<ozaktifvinc.Models.Slider>
+@{
+    ViewData["Title"] = "SliderListele";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>SliderListele</h1>
+
+
+<div class="row">
+@foreach(var i in Model)
+{
+<div class="col-6 col-md-4">
+    <div class="card">
+        <img src="~/Resimler/Slider/@i.SliderYol" class="w-100 border-bottom" alt="Sample Image">
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+        </div>
+        <div class="card-body">
+            <a href="/Admin/Yonetim/SliderSil/@i.Id" class="card-link btn btn-danger">Sil</a>
+        </div>
+    </div>
+</div>
+}
+</div>

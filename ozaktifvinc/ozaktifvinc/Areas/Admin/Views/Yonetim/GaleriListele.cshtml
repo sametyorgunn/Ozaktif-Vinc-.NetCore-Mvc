@@ -1,0 +1,25 @@
+﻿@model List<ozaktifvinc.Models.Galeri>
+@{
+    ViewData["Title"] = "GaleriListele";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>GaleriListele</h1>
+
+<div class="row">
+@foreach(var i in Model)
+{
+<div class="col-6 col-md-4">
+    <div class="card">
+        <img src="~/Resimler/Galeri/@i.ResimYol" class="w-100 border-bottom" alt="Sample Image">
+        <div class="card-body">
+            <h5 class="card-title">@i.ResimYazi</h5>
+        </div>
+        <div class="card-body">
+            <a href="/Admin/Yonetim/GaleriDuzenle/@i.Id" class="card-link btn btn-info" btn btn-info>Düzenle</a>
+            <a href="/Admin/Yonetim/GaleriSil/@i.Id" class="card-link btn btn-danger">Sil</a>
+        </div>
+    </div>
+</div>
+}
+</div>

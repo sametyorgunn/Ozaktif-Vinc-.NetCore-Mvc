@@ -1,0 +1,23 @@
+﻿@model List<ozaktifvinc.Models.Slider>
+
+@{
+    if (Model == null)
+    {
+        <div class="carousel-item active" style="background-image: url('')"></div>
+
+    }
+    else
+    {
+        @foreach (var i in Model)
+        {
+            <div class="carousel-item active" style="background-image: url('Resimler/Slider/@i.SliderYol')"></div>
+
+        }
+    }
+}
+
+@*
+<div class="carousel-item active" style="background-image: url('UpConstruction/assets/img/hero-carousel/a.jpg')"></div>
+<div class="carousel-item" style="background-image: url('UpConstruction/assets/img/hero-carousel/hero-carousel-4.jpg')"></div>
+<div class="carousel-item" style="background-image: url('UpConstruction/assets/img/hero-carousel/hero-carousel-5.jpg')"></div>
+*@

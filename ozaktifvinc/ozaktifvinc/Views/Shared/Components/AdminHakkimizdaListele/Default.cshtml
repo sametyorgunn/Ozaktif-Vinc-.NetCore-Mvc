@@ -1,0 +1,36 @@
+﻿@model ozaktifvinc.Models.Hakkimizda
+
+<table class="table">
+  <thead>
+    <tr>
+      <th hidden scope="col">#</th>
+      <th scope="col">Başlık</th>
+      <th scope="col">İçerik</th>
+      <th scope="col">Resim</th>
+      <th scope="col">Düzenle</th>
+      <th scope="col">Sil</th>
+    </tr>
+  </thead>
+  <tbody>
+     
+    <tr>
+      <th hidden scope="row">@Model.Id</th>
+      <td>@Model.Baslik</td>
+            @{
+                if(Model.Icerik.Length<=10)
+                {
+                    <td>@Model.Icerik</td>
+                }
+                else
+                {
+                     <td>@Model.Icerik.Substring(0,10)</td>
+                }
+            }
+@*      <td>@Model.Icerik.Substring(0,10)</td>
+*@       <td><img src="/Resimler/Hakkimizda/@Model.ResimYol" width="20%" /></td>
+      <td><a class="btn btn-info" href="/Admin/Yonetim/HakkimizdaDuzenle/@Model.Id">Düzenle</a></td>
+      <td><a class="btn btn-danger" href="/Admin/Yonetim/HakkimizdaSil/@Model.Id">Sil</a></td>
+    </tr>
+      
+  </tbody>
+</table>

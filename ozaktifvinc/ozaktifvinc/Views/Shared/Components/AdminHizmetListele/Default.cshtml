@@ -1,0 +1,25 @@
+﻿@model List<ozaktifvinc.Models.Hizmetler>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th hidden scope="col">#</th>
+      <th scope="col">Başlık</th>
+      <th scope="col">İçerik</th>
+      <th scope="col">Düzenle</th>
+      <th scope="col">Sil</th>
+    </tr>
+  </thead>
+  <tbody>
+      @foreach(var i in Model)
+      {
+    <tr>
+      <th hidden scope="row">@i.Id</th>
+      <td>@i.Baslik</td>
+      <td>@i.Icerik.Substring(0,7)</td>
+      <td><a class="btn btn-info" href="/Admin/Yonetim/HizmetDuzenle/@i.Id">Düzenle</a></td>
+      <td><a class="btn btn-danger" href="/Admin/Yonetim/HizmetSil/@i.Id">Sil</a></td>
+    </tr>
+      }
+  </tbody>
+</table>
